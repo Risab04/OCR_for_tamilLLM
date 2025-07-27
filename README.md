@@ -78,3 +78,8 @@ Add layout-aware extraction using LayoutParser or MarkItDown
 Visual comparison of OCR outputs
 
 Integrate word-level confidence scoring
+
+
+
+the next part of this project is to use differnt open source tool for detecting the layouts, tables, images etc present in the pds and images.
+ 
