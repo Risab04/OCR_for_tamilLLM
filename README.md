@@ -1,85 +1,128 @@
-# OCR_for_tamilLLM
-I have evaluated multiple OCR for tamil text extraction for training tamil LLM
+# 📝 OCR for Tamil LLM Training
 
-OCR Evaluation for Tamil Text Extraction
-This project focuses on evaluating the performance of multiple Optical Character Recognition (OCR) tools for extracting Tamil text from scanned PDF documents. The pipeline handles end-to-end processing — from PDF upload to image conversion, OCR application, and output storage.
+This project evaluates multiple **Optical Character Recognition (OCR)** engines for **Tamil text extraction** from scanned PDFs. The goal is to build a reliable pipeline to support **training Large Language Models (LLMs)** in Tamil by ensuring high-quality text extraction from real-world documents.
 
-Objective:
-To compare and benchmark various OCR engines for Tamil script recognition in real-world scanned PDFs, considering:
-Accuracy
-Layout retention
-Handling of complex scripts
+---
 
-Pipeline Overview:
-Upload PDF
-The user uploads a scanned Tamil-language PDF.
+## 🎯 Objective
 
-1)Convert PDF to Images
-Each page is converted into an image using pdf2image.
+To **compare and benchmark** different OCR engines for **Tamil script recognition**, with a focus on:
 
-2)Apply OCR
-Multiple OCR engines are applied individually to each image:
-Tesseract OCR (with Tamil language pack)
-PaddleOCR
-EasyOCR
+- 📈 Accuracy  
+- 🧱 Layout retention  
+- 🧩 Handling complex Tamil scripts and ligatures  
 
-3)Extract & Save Text
+---
 
-4)The recognized Tamil text is stored in .txt or .json format.
+## 🔄 Pipeline Overview
 
-Each OCR's result is saved separately for comparison.
+### 1. 📥 Upload PDF  
+Users provide scanned Tamil-language PDF documents.
 
-Tools & Libraries Used:
-Component	Tool/Library:
-PDF to Image	pdf2image
-OCR Engine 1	Tesseract-OCR
-OCR Engine 2	PaddleOCR
-OCR Engine 3	EasyOCR
-Image Processing	OpenCV, PIL
-Output Formats	.txt, .json
+### 2. 🖼️ Convert PDF to Images  
+Each page is converted into high-resolution images using `pdf2image`.
 
-Evaluation Metrics:
-To evaluate each OCR engine:
-Character Accuracy
-Word Accuracy
-Error Types (e.g., missed characters, incorrect glyphs)
-Support for complex Tamil words and ligatures
+### 3. 🔍 Apply OCR Engines  
+Multiple OCR tools are run on each image:
+- **Tesseract OCR** (with Tamil language pack)
+- **PaddleOCR**
+- **EasyOCR**
 
-Output Structure:
-Copy
-Edit
+### 4. 💾 Extract & Store Text  
+Recognized text is saved in `.txt` and optionally `.json` format for further analysis.  
+Each OCR engine’s results are saved **separately for comparison**.
+
+---
+
+## 🧰 Tools & Libraries Used
+
+| Component           | Tool / Library       |
+|---------------------|----------------------|
+| PDF to Image        | `pdf2image`          |
+| OCR Engine 1        | `Tesseract-OCR`      |
+| OCR Engine 2        | `PaddleOCR`          |
+| OCR Engine 3        | `EasyOCR`            |
+| Image Processing    | `OpenCV`, `PIL`      |
+| Output Formats      | `.txt`, `.json`      |
+
+---
+
+## 📊 Evaluation Metrics
+
+To compare OCR engines, the following metrics are used:
+
+- ✅ **Character-Level Accuracy**
+- ✅ **Word-Level Accuracy**
+- ❌ **Error Analysis**: missed characters, incorrect glyphs
+- 🔤 **Support for complex Tamil ligatures and words**
+
+---
+
+## 📁 Output Structure
+
 outputs/
 │
 ├── tesseract_output/
-│   ├── page_1.txt
-│   ├── ...
+│ ├── page_1.txt
+│ ├── ...
 │
 ├── easyocr_output/
-│   ├── page_1.txt
-│   ├── ...
+│ ├── page_1.txt
+│ ├── ...
 │
 ├── paddleocr_output/
-│   ├── page_1.txt
-│   ├── ...
+│ ├── page_1.txt
+│ ├── ...
 │
-└── combined_results.json   # (optional merged format)
-Setup Instructions
-bash
-Copy
-Edit
-# Install dependencies
+└── combined_results.json # (optional merged comparison)
+
+
+---
+
+## ⚙️ Setup Instructions
+
+```bash
+# Install Python dependencies
 pip install pdf2image pytesseract easyocr paddleocr
 
-# (Linux)
-apt install tesseract-ocr tesseract-ocr-tam
-Future Work
-Add layout-aware extraction using LayoutParser or MarkItDown
+# Install Tesseract OCR with Tamil support (Linux)
+sudo apt install tesseract-ocr tesseract-ocr-tam
 
-Visual comparison of OCR outputs
+pip install pdf2image pytesseract easyocr paddleocr
+sudo apt install tesseract-ocr tesseract-ocr-tam
 
-Integrate word-level confidence scoring
+##Future Work
+Integration of layout-aware OCR using tools like LayoutParser or MarkItDown
 
+Visual comparison of OCR outputs across engines
 
-# next big step
-the next part of this project is to use differnt open source tool for detecting the layouts, tables, images etc present in the pds and images.
- 
+Incorporation of word-level confidence scores
+
+Creation of a benchmarking dashboard for evaluation metrics
+
+##Next Big Step
+The upcoming phase of this project involves automatic detection of structural elements in scanned documents such as:
+
+Tables
+
+Images
+
+Multi-column layouts
+
+Section headers and footers
+
+These elements will be detected using advanced layout parsing tools such as:
+
+LayoutParser
+
+Donut (Document Understanding Transformer)
+
+DocTR
+
+PaddleLayout
+
+This will enable structured and intelligent document parsing, improving dataset quality for downstream Tamil LLM training.
+
+##Author
+Risab Jain
+Researcher and developer passionate about OCR, document AI, and multilingual LLM pipelines.
