@@ -1,3 +1,4 @@
+# vs code 
 import os
 from pdf2image import convert_from_path
 from PIL import Image
@@ -83,3 +84,4 @@ print("\n📋 Preview of extracted text:")
 print("-" * 30)
 preview = "\n".join(extracted_text)[:500]
 print(preview + "..." if len(preview) == 500 else preview)
+
