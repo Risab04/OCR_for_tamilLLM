@@ -1,3 +1,4 @@
+#image with content in two column 
 import os
 from pdf2image import convert_from_path
 from PIL import Image
@@ -189,5 +190,6 @@ for pdf_index, pdf_file in enumerate(pdf_files, start=1):
 #     f.write("Tamil Textbook OCR Output (Auto Layout Detection)\n")
 #     f.write("=" * 70 + "\n\n")
 #     f.write("\n".join(results) if results else "⚠️ No text extracted.")
+
 
 # print(f"\n✅ OCR complete! Results saved to:\n📁 {output_file}")
