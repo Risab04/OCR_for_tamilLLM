@@ -59,22 +59,21 @@ To compare OCR engines, the following metrics are used:
 ---
 
 ## 📁 Output Structure
-
 outputs/
-│
 ├── tesseract_output/
-│ ├── page_1.txt
-│ ├── ...
+│   ├── page_1.txt
+│   ├── ...
 │
 ├── easyocr_output/
-│ ├── page_1.txt
-│ ├── ...
+│   ├── page_1.txt
+│   ├── ...
 │
 ├── paddleocr_output/
-│ ├── page_1.txt
-│ ├── ...
+│   ├── page_1.txt
+│   ├── ...
 │
-└── combined_results.json # (optional merged comparison)
+└── combined_results.json   # (optional merged comparison)
+
 
 
 ---
