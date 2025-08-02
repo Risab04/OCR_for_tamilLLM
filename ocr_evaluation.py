@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""OCR_evaluation.ipynb
+"""OCR_evaluation.py
 """
 
 # 🔧 Install Poppler
