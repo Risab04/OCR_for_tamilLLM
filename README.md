@@ -67,26 +67,35 @@ Integration of layout-aware OCR using tools like LayoutParser or MarkItDown
 Visual comparison of OCR outputs across engines
 Incorporation of word-level confidence scores
 Creation of a benchmarking dashboard for evaluation metrics
-
 ## Next Big Step
-The upcoming phase of this project involves automatic detection of structural elements in scanned documents such as:
-Tables
-Images
-Multi-column layouts
-Section headers and footers
 
-These elements will be detected using advanced layout parsing tools such as:
-LayoutParser
-Donut (Document Understanding Transformer)
-DocTR
-PaddleLayout
-This will enable structured and intelligent document parsing, improving dataset quality for downstream Tamil LLM training.
+The upcoming phase of this project involves automatic detection of structural elements in scanned documents, such as:
+
+- Tables  
+- Images  
+- Multi-column layouts  
+- Section headers and footers  
+
+These elements will be detected using advanced layout parsing tools like:
+
+- LayoutParser  
+- Donut (Document Understanding Transformer)  
+- DocTR  
+- PaddleLayout  
+
+This will enable structured and intelligent document parsing, significantly improving dataset quality for downstream Tamil LLM training.
+
 ---
-## WEB scrapping
-In addition to OCR-based extraction, this project includes a web scraping module designed to extract Tamil text content directly from URLs. The scraper recursively visits a given webpage, collects all visible text (including from nested links), and saves the extracted content for further processing. This is particularly useful for gathering Tamil data from news sites, educational portals, and public documents, helping build a richer dataset for Tamil LLM training.
+
+## Web Scraping
+
+In addition to OCR-based extraction, this project includes a **web scraping module** designed to extract Tamil text content directly from URLs. The scraper recursively visits a given webpage, collects all visible text (including from linked pages), and saves the extracted content for further processing. This is particularly useful for gathering Tamil data from news sites, educational portals, and public documents—helping build a richer dataset for Tamil LLM training.
+
 ---
+
 ## Author
-Risab S
+
+**Risab S**
 
 ## ⚙️ Setup Instructions
 
