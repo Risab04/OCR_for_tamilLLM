@@ -78,20 +78,7 @@ outputs/
 
 
 ---
-
-## ⚙️ Setup Instructions
-
-```bash
-# Install Python dependencies
-pip install pdf2image pytesseract easyocr paddleocr
-
-# Install Tesseract OCR with Tamil support (Linux)
-sudo apt install tesseract-ocr tesseract-ocr-tam
-
-pip install pdf2image pytesseract easyocr paddleocr
-sudo apt install tesseract-ocr tesseract-ocr-tam
-
-##Future Work
+## Future Work
 Integration of layout-aware OCR using tools like LayoutParser or MarkItDown
 
 Visual comparison of OCR outputs across engines
@@ -100,7 +87,7 @@ Incorporation of word-level confidence scores
 
 Creation of a benchmarking dashboard for evaluation metrics
 
-##Next Big Step
+## Next Big Step
 The upcoming phase of this project involves automatic detection of structural elements in scanned documents such as:
 
 Tables
@@ -123,6 +110,22 @@ PaddleLayout
 
 This will enable structured and intelligent document parsing, improving dataset quality for downstream Tamil LLM training.
 
-##Author
-Risab Jain
-Researcher and developer passionate about OCR, document AI, and multilingual LLM pipelines.
+Author
+Risab S
+---
+## WEB scrapping
+In addition to OCR-based extraction, this project includes a web scraping module designed to extract Tamil text content directly from URLs. The scraper recursively visits a given webpage, collects all visible text (including from nested links), and saves the extracted content for further processing. This is particularly useful for gathering Tamil data from news sites, educational portals, and public documents, helping build a richer dataset for Tamil LLM training.
+
+
+## ⚙️ Setup Instructions
+
+```bash
+# Install Python dependencies
+pip install pdf2image pytesseract easyocr paddleocr
+
+# Install Tesseract OCR with Tamil support (Linux)
+sudo apt install tesseract-ocr tesseract-ocr-tam
+
+pip install pdf2image pytesseract easyocr paddleocr
+sudo apt install tesseract-ocr tesseract-ocr-tam
+
