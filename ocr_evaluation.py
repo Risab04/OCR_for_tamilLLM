@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 """OCR_evaluation.ipynb
-
-
-Original file is located at
-    https://colab.research.google.com/drive/1ewAeAOjGev_4tvpFmOC1IUalyBPvSUnk
 """
 
 # 🔧 Install Poppler
