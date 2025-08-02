@@ -1,3 +1,4 @@
+# web scapping code 
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
@@ -230,4 +231,5 @@ def main():
         print("No pages were scraped successfully.")
  
 if __name__ == "__main__":
+
     main()
